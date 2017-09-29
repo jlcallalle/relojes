@@ -1,0 +1,31 @@
+.wrapper {
+	//background: rgba(255,0,0,0.1);
+}
+.slider-home {
+	.lista-slider {
+		li {
+			.box-slier {
+				background-image: url(../images/slider1.jpg);
+				background-repeat:no-repeat;
+				background-position: top center;
+				background-color:gray;
+				background-size:cover;
+				height: 650px;
+			}
+		}
+	}
+}
+
+.promo-reloj {
+	.box-reloj {
+		background-image: url(../images/promo-reloj.jpg);
+		height: 266px;
+	}
+}
+
+.list-box-reloj {
+	background-image: url(../images/boxes.jpg);
+	height: 606px;
+	background-size:cover;
+	background-repeat: no-repeat;
+}

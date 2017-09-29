@@ -9,11 +9,12 @@ html(lang='es')
         link(rel='stylesheet', href='css/main.css')
 
     body
-        include ../includes/header
+        .wrapper
+            include ../includes/header
 
-        block content
+            block content
 
-        include ../includes/footer
+            include ../includes/footer
 
-        script(src='js/min/recursos.min.js')
+        script(src='js/recursos.js')
         script(src='js/main.js')
