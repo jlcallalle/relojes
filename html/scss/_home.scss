@@ -49,10 +49,43 @@
 
 
 .promo-reloj {
+	//background-image: url(../images/promo-reloj.jpg);
+	background-image: url(../images/bg.zapato.png);
+	background-repeat: no-repeat;
+	background-color: #141a17;
+	height: 266px;
+	overflow:hidden;
+	padding:0 0 0 125px;
+	position:relative;
 	.box-reloj {
-		background-image: url(../images/promo-reloj.jpg);
-		height: 266px;
+		width: 197px;
+		float: left;
 	}
+
+	.detalle-reloj {
+		//display:flex;
+	    height: 100%;
+	    display: inline-block;
+
+		.texto-info {
+			    width: 300px;
+			    text-align: center;
+			    justify-content: center;
+			    align-items: center;
+			    align-content: center;
+			    display: flex;
+			    margin: 0 0 0 74px;
+			    height: inherit;
+			h2 {
+				color:white;
+				font-family: 'Gadugi';
+			}
+			span {
+				display: block;
+			}
+		}
+	}
+
 }
 
 .list-box-reloj {
@@ -63,3 +96,33 @@
 }
 
 
+
+
+.btn-producto {
+    /* width: 200px; */
+    /* height: 50px; */
+    background: #b3935c;
+    text-transform: uppercase;
+    color: black;
+    /* padding: 20px; */
+    display: inline-block;
+    text-align: center;
+    padding: 12px 42px;
+    font-family: Gadugi;
+    font-weight: bold;
+    position: absolute;
+    bottom: 42px;
+    margin-right: 35px;
+    right: 0;
+}
+
+span.code {
+    position: absolute;
+    top: 0;
+    color: #dbdbdb;
+    text-align: right;
+    right: 0;
+    padding: 10px;
+    font-size: 13px;
+    margin-right: 10px;
+}
