@@ -2923,7 +2923,6 @@ a {
     .slider-home {
       height: 650px; } }
   .slider-home .lista-slider li {
-    background-image: url(../images/slider1.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-color: gray;
@@ -3089,7 +3088,8 @@ span.code {
         width: 100%; }
         @media screen and (min-width: 1200px) {
           .list-box-reloj .img-reloj a span {
-            font-size: 16px; } }
+            font-size: 16px;
+            opacity: 0; } }
       .list-box-reloj .img-reloj a:hover span {
         opacity: 1;
         -webkit-transition: visibility 0s, opacity 0.5s linear;

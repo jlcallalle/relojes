@@ -9,7 +9,7 @@
 	 }
 	.lista-slider {
 		li {
-			background-image: url(../images/slider1.jpg);
+			//background-image: url(../images/slider1.jpg);
 			background-repeat:no-repeat;
 			background-position: top center;
 			background-color:gray;
@@ -210,6 +210,7 @@ span.code {
 			    width: 100%;
 			    @include min-screen(1200px) { 
 				     font-size: 16px;
+				     opacity: 0;
 				}
 
 		    }
