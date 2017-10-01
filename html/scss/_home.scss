@@ -2,19 +2,51 @@
 	//background: rgba(255,0,0,0.1);
 }
 .slider-home {
+	 height: 350px;
+	 @include min-screen($tablet-p) { 
+		height: 650px;
+	 }
 	.lista-slider {
 		li {
-			.box-slier {
-				background-image: url(../images/slider1.jpg);
-				background-repeat:no-repeat;
-				background-position: top center;
-				background-color:gray;
-				background-size:cover;
+			background-image: url(../images/slider1.jpg);
+			background-repeat:no-repeat;
+			background-position: top center;
+			background-color:gray;
+			background-size:cover;
+			height: 350px;
+			@include min-screen($tablet-p) { 
 				height: 650px;
-			}
+			 }
 		}
 	}
+
+
+	.bx-wrapper {
+	    box-shadow: none;
+	    border: none;
+	    background: #fff;
+	    margin-bottom: 0;
+	    .bx-pager, .bx-controls-auto {
+		    bottom: 30px;
+		}
+		.bx-next {
+		    background: url(../images/right.png) no-repeat 0 0;
+		}
+
+		.bx-prev {
+		    background: url(../images/left.png) no-repeat 0 0;
+		}
+
+		.bx-controls-direction a {
+		    width: 24px;
+		    height: 41px;
+		}
+	}
+
 }
+
+
+
 
 .promo-reloj {
 	.box-reloj {
@@ -29,3 +61,5 @@
 	background-size:cover;
 	background-repeat: no-repeat;
 }
+
+

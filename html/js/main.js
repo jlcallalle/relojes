@@ -33,7 +33,11 @@ $(document).ready(function(){
         MyApp.seccion.modulo();
     }
 
+     $('.lista-slider').bxSlider({
+      //mode: 'fade',
+      //pager: false,
 
-     $('.lista-slider').bxSlider();
+    });
+
 
 });
