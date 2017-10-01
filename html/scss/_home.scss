@@ -1,5 +1,6 @@
 .wrapper {
-	//background: rgba(255,0,0,0.1);
+   background: #202524;
+   padding: 0 0 100px 0;
 }
 .slider-home {
 	 height: 350px;
@@ -50,35 +51,77 @@
 
 .promo-reloj {
 	//background-image: url(../images/promo-reloj.jpg);
-	background-image: url(../images/bg.zapato.png);
-	background-repeat: no-repeat;
 	background-color: #141a17;
-	height: 266px;
+	//height: 266px;
 	overflow:hidden;
-	padding:0 0 0 125px;
 	position:relative;
+	text-align:center;
+	padding:40px 0;
+	@include min-screen($tablet-p) { 
+		height: 266px;
+		background-image: url(../images/bg-zapato.jpg);
+		//background-repeat: no-repeat;
+		//padding:0 0 0 125px;
+		padding:0;
+
+	    /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-size: cover;
+
+	    //background-position: 28% 100%;
+   		background-size: 25%;
+
+
+	}
+
 	.box-reloj {
-		width: 197px;
-		float: left;
+		
+		@include min-screen($tablet-p) { 
+			width: 197px;
+		    float: left;
+		    position: absolute;
+		    left: 130px;
+		}
+
+		@media all and (min-width: $tablet-p) and (max-width: 1100px) {
+			left: 45px;
+		}
+
 	}
 
 	.detalle-reloj {
 		//display:flex;
-	    height: 100%;
-	    display: inline-block;
+		
+	    @include min-screen($tablet-p) { 
+			height: 100%;
+		    display: flex;
+		    padding: 0;
+		    justify-content: center;
+		}
 
 		.texto-info {
-			    width: 300px;
+		   
+			 padding: 20px 0;
+			@include min-screen($tablet-p) { 
+				max-width: 300px;
 			    text-align: center;
 			    justify-content: center;
 			    align-items: center;
 			    align-content: center;
 			    display: flex;
-			    margin: 0 0 0 74px;
+			    margin: 0 7px 0 0;
 			    height: inherit;
+			    padding:0;
+			}
+
 			h2 {
 				color:white;
 				font-family: 'Gadugi';
+				font-size: 20px;
+				@include min-screen($tablet-p) {
+					font-size: 24px;
+				}
 			}
 			span {
 				display: block;
@@ -88,32 +131,29 @@
 
 }
 
-.list-box-reloj {
-	background-image: url(../images/boxes.jpg);
-	height: 606px;
-	background-size:cover;
-	background-repeat: no-repeat;
-}
-
 
 
 
 .btn-producto {
-    /* width: 200px; */
-    /* height: 50px; */
-    background: #b3935c;
+	 background: #b3935c;
     text-transform: uppercase;
     color: black;
-    /* padding: 20px; */
     display: inline-block;
     text-align: center;
     padding: 12px 42px;
     font-family: Gadugi;
     font-weight: bold;
-    position: absolute;
-    bottom: 42px;
-    margin-right: 35px;
-    right: 0;
+    @include min-screen($tablet-p) { 
+	    position: absolute;
+	    bottom: 42px;
+	    margin-right: 35px;
+	    right: 0;
+	}
+
+	&:hover {
+		background: #ceaf79;
+	}
+
 }
 
 span.code {
@@ -125,4 +165,83 @@ span.code {
     padding: 10px;
     font-size: 13px;
     margin-right: 10px;
+}
+
+.list-box-reloj {
+	//background-image: url(../images/boxes.jpg);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    border-right: 5px solid black;
+	.img-reloj {
+		/* width: 290px; */
+	    //background: rgba(255, 0, 0, 0.1);
+	    /* border-top: 5px solid black; */
+	    border-left: 5px solid black;
+	    border-bottom: 5px solid black;
+	    width: 100%;
+
+	    @include min-screen($movil-l) { 
+		    width: 50%;
+		}
+
+	    @include min-screen(1200px) { 
+		    width: 25%;
+		}
+
+	    a {
+		    display: block;
+		    position: relative;
+		    span {
+		    	font-family: 'Gadugi';
+			    display: block;
+			    background: rgba(0, 0, 0, 0.6);
+			    color: white;
+			    position: absolute;
+			    z-index: 11;
+			    padding: 10px;
+			    bottom: 0;
+			    font-size: 14px;
+			    text-align: center;
+			    opacity: 1;
+			    width: 100%;
+			    @include min-screen(1200px) { 
+				     font-size: 16px;
+				}
+
+		    }
+
+		    &:hover {
+		    	span {
+		    		opacity: 1;
+		    		transition: visibility 0s, opacity 0.5s linear;
+		    	}
+		    }
+		}
+
+		img {
+		    width: 100%;
+		    display: block;
+		}
+
+	}
+}
+
+
+
+.box-video {
+	display: flex;
+	width:100%;
+	background:black;
+	border:5px solid black;
+	iframe {
+		border:0;
+		@include max-screen($tablet-p) { 
+		    width: 100%;
+			height: 100%;
+		}
+	}
 }
